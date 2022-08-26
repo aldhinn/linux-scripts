@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+
+sudo dnf config-manager --set-disable fedora-cisco-openh264
+sudo dnf upgrade --refresh -y
+sudo flatpak update -y

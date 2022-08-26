@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+
+sudo dnf install -y virt-manager xournalpp gnome-extensions-app \
+gnome-tweaks neofetch gnome-shell-extension-dash-to-dock \
+gnome-shell-extension-no-overview gnome-shell-extension-user-theme
