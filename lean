@@ -11,6 +11,6 @@ mediawriter libreoffice* ImageMagick-libs xrandr ibus-typing-booster \
 gnome-color-manager desktop-backgrounds-gnome f36-backgrounds-gnome \
 fedora-workstation-backgrounds gnome-backgrounds yelp vim-* fedora-chromium-config \
 libreport-plugin-reportuploader totem caca-utils xprop w3m-img xdpyinfo xwininfo \
-abrt-java-connector
+abrt-java-connector xorg-x11-drv-openchrome
 
 sudo dnf autoremove
