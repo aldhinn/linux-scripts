@@ -1,0 +1,37 @@
+#!/usr/bin/bash
+
+# The script I run to install the apps I need for a development
+# environment virtual machine desktop.
+
+# Install rpm packages.
+sudo dnf install -y gnome-extensions-app \
+gnome-tweaks neofetch gnome-shell-extension-user-theme \
+java-latest-openjdk-devel nodejs npm dotnet-sdk-6.0 \
+python3-pip python-unversioned-command gcc clang \
+cmake mingw32-gcc mingw32-gcc-c++ mingw64-gcc mingw64-gcc-c++ \
+grpc-devel mingw32-protobuf-static mingw32-protobuf-tools \
+mingw64-protobuf-static mingw64-protobuf-tools community-mysql-devel \
+community-mysql
+
+# Installing VS Code
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
+dnf check-update
+sudo dnf install -y code
+
+# Install snapd.
+sudo dnf install -y snapd
+sudo ln -s /var/lib/snapd/snap /snap
+
+# Install snaps.
+sudo snap install intellij-idea-community --classic
+sudo snap install gradle --classic
+sudo snap install android-studio --classic
+
+# Remove weak dependencies.
+sudo dnf remove -y ImageMagick caca-utils compiler-rt libomp \
+libomp-devel nodejs-docs nodejs-full-i18n w3m-img xdpyinfo \
+xprop xrandr xwininfo
+
+# Autoremove all other unnecessary packages.
+sudo dnf autoremove -y

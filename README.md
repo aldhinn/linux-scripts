@@ -6,5 +6,27 @@
 
 These are the scripts I use for setting up a Fedora Worsktation instance.
 
+## 🦫 Sequence
+I typically use these scripts like this.
+\
+\
+After installation, I run:
+``` bash
+./lean
+```
+to create a lean install. After that, I'll run
+``` bash
+./update
+```
+I would restart. Then finally, I either run,
+``` bash
+./setup/desktop
+```
+or
+``` bash
+./setup/vm-dev
+```
+depending on what I wanted to setup.
+
 ## 📜 LICENCE
 This contents of this repo is licenced under the [MIT Licence](./LICENCE)

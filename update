@@ -1,5 +1,14 @@
 #!/usr/bin/bash
 
-sudo dnf config-manager --set-disable fedora-cisco-openh264
+# This script updates all the packages installed.
+
 sudo dnf upgrade --refresh -y
 sudo flatpak update -y
+
+# Update snaps if snapd is installed.
+if [ -f "/usr/bin/snap" ]; then
+sudo snap refresh
+fi
+
+sudo dnf remove -y podman-gvproxy unbound-anchor
+sudo dnf autoremove -y

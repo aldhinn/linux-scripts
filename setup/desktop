@@ -1,0 +1,29 @@
+#!/usr/bin/bash
+
+# The script I run to install the apps I need for a regular desktop.
+
+sudo dnf install -y virt-manager xournalpp gnome-extensions-app \
+gnome-tweaks neofetch gnome-shell-extension-user-theme \
+gimp texstudio keepassxc
+
+# Installing veracrypt.
+sudo wget -P ~/Downloads/ \
+https://www.idrix.fr/VeraCrypt/VeraCrypt_PGP_public_key.asc
+gpg --import ~/Downloads/VeraCrypt_PGP_public_key.asc
+sudo wget -P ~/Downloads/ \
+https://launchpad.net/veracrypt/trunk/1.25.9/+download/veracrypt-1.25.9-CentOS-8-x86_64.rpm
+sudo wget -P ~/Downloads/ \
+https://launchpad.net/veracrypt/trunk/1.25.9/+download/veracrypt-1.25.9-CentOS-8-x86_64.rpm.sig
+gpg --verify \
+~/Downloads/veracrypt-1.25.9-CentOS-8-x86_64.rpm.sig \
+~/Downloads/veracrypt-1.25.9-CentOS-8-x86_64.rpm
+sudo dnf install -y ~/Downloads/veracrypt-1.25.9-CentOS-8-x86_64.rpm
+sudo rm -r ~/Downloads/*
+
+# Remove weak dependencies.
+sudo dnf remove -y ImageMagick adwaita-gtk2-theme brltty caca-utils libcanberra-gtk2 \
+mypaint-brushes perl-Class-XSAccessor perl-GD-Barcode perl-List-MoreUtils \
+perl-PerlIO-utf8_strict w3m-img xdpyinfo xprop xrandr xwininfo
+
+# Autoremove all other unnecessary packages.
+sudo dnf autoremove -y
