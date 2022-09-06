@@ -16,7 +16,7 @@ fedora-workstation-backgrounds gnome-backgrounds yelp vim-* fedora-chromium-conf
 libreport-plugin-reportuploader totem \
 abrt-java-connector xorg-x11-drv-openchrome \
 speech-dispatcher libjose sssd-idp \
-qt5-qtgraphicaleffects qt5-qtquickcontrols qt5-qtquickcontrols2
+qt5-qtgraphicaleffects qt5-qtquickcontrols qt5-qtquickcontrols2 podman python3-unbound
 
 # Disable this repository.
 sudo dnf config-manager --set-disable -y fedora-cisco-openh264
