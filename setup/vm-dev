@@ -15,7 +15,7 @@ vulkan-tools vulkan-loader-devel vulkan-validation-layers-devel \
 mingw*-vulkan-validation-layers mingw*-vulkan-tools \
 mingw*-vulkan-loader mingw*-vulkan-headers \
 glew-devel mingw*-glew-static mingw*-glew-tools \
-glslc glfw-devel glm-devel
+glslc glfw-devel glm-devel stb_image-devel
 
 # Installing VS Code
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
