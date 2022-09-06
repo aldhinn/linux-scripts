@@ -8,10 +8,14 @@ sudo dnf install -y gnome-extensions-app \
 gnome-tweaks neofetch gnome-shell-extension-user-theme \
 java-latest-openjdk-devel nodejs npm dotnet-sdk-6.0 \
 python3-pip python-unversioned-command gcc clang \
-cmake mingw32-gcc mingw32-gcc-c++ mingw64-gcc mingw64-gcc-c++ \
-grpc-devel mingw32-protobuf-static mingw32-protobuf-tools \
-mingw64-protobuf-static mingw64-protobuf-tools community-mysql-devel \
-community-mysql
+cmake mingw*-gcc mingw*-gcc-c++ \
+grpc-devel mingw*-protobuf-static mingw*-protobuf-tools \
+community-mysql-devel community-mysql libXxf86vm-devel \
+vulkan-tools vulkan-loader-devel vulkan-validation-layers-devel \
+mingw*-vulkan-validation-layers mingw*-vulkan-tools \
+mingw*-vulkan-loader mingw*-vulkan-headers \
+glew-devel mingw*-glew-static mingw*-glew-tools \
+glslc glfw-devel glm-devel
 
 # Installing VS Code
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
