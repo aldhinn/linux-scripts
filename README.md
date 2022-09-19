@@ -24,7 +24,7 @@ I would restart. Then finally, I either run,
 ```
 or
 ``` bash
-./setup/vm-dev
+./setup/dev-vm-desktop
 ```
 depending on what I wanted to setup.
 
