@@ -4,7 +4,7 @@
 
 sudo dnf install -y virt-manager xournalpp gnome-extensions-app \
 gnome-tweaks neofetch gnome-shell-extension-user-theme \
-gimp texstudio keepassxc chessx blender ardour6
+gimp texstudio keepassxc chessx blender ardour6 gpick
 
 # Enable the flathub repo.
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
@@ -32,7 +32,9 @@ sudo rm -r ~/Downloads/*
 sudo dnf remove -y ImageMagick adwaita-gtk2-theme brltty caca-utils libcanberra-gtk2 \
 mypaint-brushes perl-Class-XSAccessor perl-GD-Barcode perl-List-MoreUtils \
 perl-PerlIO-utf8_strict w3m-img xdpyinfo xprop xrandr xwininfo \
-compiler-rt libomp libomp-devel proj-data-*
+compiler-rt libomp libomp-devel proj-data-* \
+openssl-pkcs11 sane-backends-drivers-cameras \
+sane-backends-drivers-scanners
 
 # Autoremove all other unnecessary packages.
 sudo dnf autoremove -y
