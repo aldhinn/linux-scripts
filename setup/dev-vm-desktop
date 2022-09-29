@@ -39,7 +39,7 @@ sudo dnf remove -y ImageMagick caca-utils compiler-rt libomp \
 libomp-devel nodejs-docs nodejs-full-i18n w3m-img xdpyinfo \
 xprop xrandr xwininfo dosbox-staging \
 openssl-pkcs11 sane-backends-drivers-cameras \
-sane-backends-drivers-scanners
+sane-backends-drivers-scanners cups-filters
 
 # Autoremove all other unnecessary packages.
 sudo dnf autoremove -y
