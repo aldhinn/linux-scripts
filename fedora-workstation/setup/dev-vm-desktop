@@ -34,6 +34,13 @@ sudo snap install intellij-idea-community --classic
 sudo snap install gradle --classic
 sudo snap install android-studio --classic
 
+# Enable the flathub repo.
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+sudo flatpak remote-modify --enable flathub
+
+# Install flatpaks.
+flatpak install libreoffice -y
+
 # Remove weak dependencies.
 sudo dnf remove -y ImageMagick caca-utils compiler-rt libomp \
 libomp-devel nodejs-docs nodejs-full-i18n w3m-img xdpyinfo \
