@@ -13,6 +13,7 @@ sudo flatpak remote-modify --enable flathub
 flatpak install libreoffice -y
 flatpak install flathub com.obsproject.Studio -y
 flatpak install flathub org.kde.kdenlive -y
+flatpak install flathub org.videolan.VLC -y
 
 # Installing veracrypt.
 sudo wget -P ~/Downloads/ \
