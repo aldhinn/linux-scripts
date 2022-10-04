@@ -17,7 +17,7 @@ mingw*-vulkan-loader mingw*-vulkan-headers \
 glew-devel mingw*-glew-static mingw*-glew-tools \
 glslc glfw-devel glm-devel stb_image-devel wine \
 mingw*-winpthreads-static moby-engine keepassxc nginx \
-gpick
+gpick cargo
 
 # Installing VS Code
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
