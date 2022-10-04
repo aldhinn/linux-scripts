@@ -11,7 +11,7 @@ sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub
 sudo flatpak remote-modify --enable flathub
 
 # Install flatpaks.
-flatpak install libreoffice -y
+flatpak install flathub org.libreoffice.LibreOffice -y
 flatpak install flathub com.obsproject.Studio -y
 flatpak install flathub org.kde.kdenlive -y
 flatpak install flathub org.videolan.VLC -y
