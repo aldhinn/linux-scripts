@@ -1,0 +1,18 @@
+#!/usr/bin/bash
+# Script ran from the live environment.
+# Make sure you have already mounted the appropriate
+# block devices accordingly.
+
+# Update the packages repos.
+sudo pacman -Sy
+
+# Install base packages.
+sudo pacstrap -K /mnt \
+base linux-hardened linux-firmware \
+sof-firmware iproute2 nano neofetch man-db \
+man-pages texinfo grub sudo ntfs-3g \
+efibootmgr
+
+sudo genfstab -U /mnt >> /mnt/etc/fstab
+
+sudo arch-chroot /mnt

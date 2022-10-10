@@ -1,0 +1,9 @@
+#!/usr/bin/bash
+# Run this script when inside the chroot.
+
+sudo mkinitcpio -P
+sudo passwd
+
+# Install grub.
+sudo mkdir /boot/efi/
+sudo grub-install --target=x86_64-efi --efi-directory=/boot/efi/ --bootloader-id=GRUB
