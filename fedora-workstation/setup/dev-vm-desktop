@@ -50,3 +50,6 @@ sane-backends-drivers-scanners cups-filters
 
 # Autoremove all other unnecessary packages.
 sudo dnf autoremove -y
+
+# Remove old kernels.
+sudo dnf remove -y $(dnf repoquery --installonly --latest-limit=-1 -q)
