@@ -5,5 +5,9 @@ sudo mkinitcpio -P
 sudo passwd
 
 # Install grub.
-sudo mkdir /boot/efi/
-sudo grub-install --target=x86_64-efi --efi-directory=/boot/efi/ --bootloader-id=GRUB
+if [ $# -eq 0 ]; then
+	sudo mkdir /boot/efi/
+	sudo grub-install --target=x86_64-efi --efi-directory=/boot/efi/ --bootloader-id=GRUB
+elif [ $1 == --bios ]; then
+	grub-install --target=i386-pc $2
+fi
