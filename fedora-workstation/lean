@@ -19,7 +19,7 @@ speech-dispatcher libjose sssd-idp \
 qt5-qtgraphicaleffects qt5-qtquickcontrols qt5-qtquickcontrols2 podman \
 python3-unbound gnome-remote-desktop conmon \
 dracut-config-rescue dracut-live dracut-network \
-cpp sane-backends sane-backends-libs
+cpp sane-backends sane-backends-libs python3-chardet
 
 # Disable this repository.
 sudo dnf config-manager --set-disable -y fedora-cisco-openh264
