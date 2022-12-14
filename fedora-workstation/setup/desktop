@@ -5,7 +5,7 @@
 sudo dnf install -y virt-manager xournalpp gnome-extensions-app \
 gnome-tweaks neofetch gnome-shell-extension-user-theme \
 gimp texstudio keepassxc chessx blender ardour6 gpick \
-guestfs-tools
+guestfs-tools qemu
 
 # Enable the flathub repo.
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
@@ -38,7 +38,7 @@ perl-PerlIO-utf8_strict w3m-img xdpyinfo xprop xrandr xwininfo \
 compiler-rt libomp libomp-devel \
 openssl-pkcs11 sane-backends-drivers-cameras \
 sane-backends-drivers-scanners clevis-pin-tpm2 \
-libguestfs-xfs
+libguestfs-xfs unbound-anchor
 
 # Autoremove all other unnecessary packages.
 sudo dnf autoremove -y
